@@ -1,0 +1,264 @@
+/* webapp/static/webapp/style.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+body.dark-mode {
+    background-color: #1a1a1a; /* Dark mode background color */
+    color: #fff; /* Dark mode text color */
+}
+
+
+header img {
+    width: 200px;
+    position: absolute;
+    top: 1px;
+    left: 2%;
+    
+
+}
+
+/* Set the CSS variable value based on the image width */
+:root {
+    --header-padding: calc(170px / 2 + 10px); /* Adjust the formula based on your layout */
+}
+
+main {
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 8px; /* Adjust the value to control the roundness of corners */
+}
+
+
+
+
+/* Add styles for the video element */
+#myVideo {
+    width: 50%;
+    height: 60vh;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: #000; /* Change this to your desired background color */
+
+}
+
+/* Other styles */
+
+header {
+    background-color: #fff;
+    color: #000; /* Black text color for better contrast */
+    text-align: center;
+    padding: var(--header-padding); /* Use CSS variable for padding */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Adjust the value to control the roundness of corners */
+
+}
+
+
+.logo-container img {
+    max-height: 50%; /* Adjust the max height as needed */
+    position: relative; /* Enable relative positioning for child elements */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px; /* Adjust as needed */
+    font-size: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000; /* Set text color to black */
+    font-weight: bold;
+     position: relative; /* Enable relative positioning for child elements */
+}
+
+/* Other styles */
+
+.cart-icon {
+    margin-left: auto; /* Push the cart to the right */
+}
+
+.cart-icon img {
+    width: 40px; /* Adjust the width of the cart icon */
+    height: 40px; /* Adjust the height of the cart icon */
+    margin-right: 5px; /* Adjust the spacing between the icon and the text */
+}
+
+/* Add this to your style.css file */
+
+.night-mode-container img {
+    cursor: pointer;
+    width: 100px; /* Adjust the width of the image */
+    height: 100px; /* Adjust the height of the image */
+    margin-right: 5px; /* Adjust the spacing between the icon and other elements */
+}
+
+/* Other styles */
+
+/* Menu panel styles */
+.menu-panel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+
+.item-details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #000; /* Set text color to black */
+    font-weight: bold;
+    background-color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+
+.item-details p {
+    margin: 0; /* Remove default margin for p */
+}
+
+.add-to-cart-button {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000; /* Add a border */
+    padding: 8px 15px; /* Increase padding for a larger button */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Add smooth transitions */
+    border-radius: 5px; /* Add rounded corners */
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.add-to-cart-button:hover {
+    background-color: #000;
+    color: #fff;
+    border-color: #fff;
+}
+
+/* style.css */
+form {
+    width: 50%; /* Adjust the width as needed */
+    max-width: 500px; /* Set a maximum width to prevent it from becoming too wide */
+    margin: 20px auto; /* Center the form horizontally and add vertical margin */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* ensures padding and border are included in the width */
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+button[type="button"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="button"]:hover {
+    background-color: #0056b3;
+}
+
+button[type="cancel"] {
+    padding: 10px 20px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="cancel"]:hover {
+    background-color: darkred;
+}
+
+h1 {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+
+ /* Table styling */
+        .menu-table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .menu-table th, .menu-table td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        .menu-table th {
+            background-color: #f2f2f2;
+        }
+
+
+
+/* Adjust styles for smaller screens */
+@media only screen and (max-width: 600px) {
+    nav ul li {
+        margin-right: 10px; /* Adjust spacing for smaller screens */
+        font-size: 20px; /* Decrease font size for smaller screens */
+    }
+
+    .cart-icon {
+        margin-left: 0; /* Reset margin for smaller screens */
+    }
+}
+
+/* Other styles */
+
+.cart-icon {
+    margin-left: auto; /* Push the cart to the right */
+}
+
+.cart-icon img {
+    width: 40px; /* Adjust the width of the cart icon */
+    height: 40px; /* Adjust the height of the cart icon */
+    margin-right: 5px; /* Adjust the spacing between the icon and the text */
+}

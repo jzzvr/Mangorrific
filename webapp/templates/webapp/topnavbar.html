@@ -1,0 +1,18 @@
+{% load static %}
+<header>
+    <div class="logo-container">
+        <img src="{% static 'webapp/images/logo.png' %}" alt="My Logo">
+    </div>
+    <!--<h1>Welcome to My Website</h1>-->
+    <nav>
+        <ul>
+            <li class="night-mode-container">
+                <img id="toggleButton" src="{% static 'webapp/images/night-mode.png' %}" alt="Night Mode Icon" onclick="changeColor()">
+            </li>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About Us</a></li>
+            <li><a href="{% url 'menu' %}">Menu</a></li>
+            <li class="cart-icon"><a href="{% url 'cart' %}"><img src="{% static 'webapp/images/cart-icon.png' %}" alt="Cart Icon"></a></li>
+        </ul>
+    </nav>
+</header>

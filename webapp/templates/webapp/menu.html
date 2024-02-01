@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'webapp/style.css' %}">
+    <!-- Add this line to include Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <title>Menu - My Website</title>
+</head>
+<body>
+
+   {% include 'webapp/topnavbar.html' %}
+
+    <!-- Update your HTML -->
+
+    <main>
+        <div class="text-right mb-3">
+            
+    <a href="{% url 'add_product' %}" class="btn btn-primary">Add Product</a>
+</div>
+
+       <div class="table-responsive">
+    <table class="table menu-table">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Category</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in products %}
+                <tr>
+                <td><img src="{{ product.image.url }}" alt="{{ product.name }}" style="max-width: 100px; max-height: 100px;"></td>
+                    <td>{{ product.name }}</td>
+                    <td>${{ product.price }}</td>
+                    <td>{{ product.description }}</td>
+                    <td>{{ product.category }}</td>
+                    <td>
+                        <a href="{% url 'edit_product' product.id %}" class="btn btn-primary">Edit</a>&nbsp;
+                        <a href="{% url 'delete_product' product.id %}" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+    </main>
+
+    <script src="{% static 'webapp/script.js' %}"></script>
+</body>
+</html>

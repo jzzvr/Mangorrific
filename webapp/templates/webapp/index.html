@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'webapp/style.css' %}">
+    <title>My Website</title>
+</head>
+<body>
+
+   {% include 'webapp/topnavbar.html' %}
+
+    <main>
+        <video id="myVideo" controls autoplay>
+            <source src="{% static 'webapp/images/mango.mp4' %}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+
+
+        <!-- <main>
+    <img src="{% static 'webapp/images/mnm.png' %}" alt="Sample Image">
+</main> -->
+
+
+        <p></p>
+        <!-- webapp/static/webapp/index.html -->
+
+
+
+    </main>
+    <script src="{% static 'webapp/script.js' %}"></script>
+</body>
+</html>
